@@ -57,7 +57,7 @@
                 <input type="text" id="height" name="height" onchange="reloadCard()" value="400px">
 
                 <label for="border_radius">Card border radius:</label>
-                <input type="text" id="border_radius" name="border_radius" onchange="reloadCard()" value="10px">
+                <input type="text" id="border_radius" name="border_radius" onchange="reloadCard()" value="10">
 
                 <label for="font_size">Font size:</label>
                 <input type="text" id="font_size" name="font_size" onchange="reloadCard()" value="18px">
@@ -92,7 +92,7 @@
             var url = base_url;
 
             function reloadCard() {
-                url = `${base_url}?title=${document.getElementById('title').value}&text=${document.getElementById('text').value}&horizontal_margin=${document.getElementById('horizontal_margin').value}&vertical_margin=${document.getElementById('vertical_margin').value}&background_image=${document.getElementById('background_image').value}&click_url=${document.getElementById('click_url').value}&new_tab=${document.getElementById('new_tab').value}&width=${document.getElementById('width').value}&height=${document.getElementById('height').value}&font_size=${document.getElementById('font_size').value}&rotation_amount=${document.getElementById('rotation_amount').value}&text_color=${document.getElementById('text_color').value.split('#')[1]}&direction=${document.getElementById('direction').value}&glow=${document.getElementById('glow').value}&border-radius=${document.getElementById('border_radius').value}`
+                url = `${base_url}?title=${document.getElementById('title').value}&text=${document.getElementById('text').value}&horizontal_margin=${document.getElementById('horizontal_margin').value}&vertical_margin=${document.getElementById('vertical_margin').value}&background_image=${document.getElementById('background_image').value}&click_url=${document.getElementById('click_url').value}&new_tab=${document.getElementById('new_tab').value}&width=${document.getElementById('width').value}&height=${document.getElementById('height').value}&font_size=${document.getElementById('font_size').value}&rotation_amount=${document.getElementById('rotation_amount').value}&text_color=${document.getElementById('text_color').value.split('#')[1]}&direction=${document.getElementById('direction').value}&glow=${document.getElementById('glow').value}&border_radius=${document.getElementById('border_radius').value}`
                 console.log(url)
                 document.querySelector('iframe').src = url
             }
