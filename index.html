@@ -28,32 +28,46 @@
                 -->
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" onchange="reloadCard()" value="Title">
+                
                 <label for="text">Text:</label>
                 <input type="text" name="text" id="text" onchange="reloadCard()" value="This is the default">
+
                 <label for="horizontal_margin">Horizontal margin:</label>
                 <input type="text" id="horizontal_margin" name="horizontal_margin" onchange="reloadCard()" value="20px">
+
                 <label for="vertical_margin">Vertical margin:</label>
                 <input type="text" id="vertical_margin" name="vertical_margin" onchange="reloadCard()" value="20px">
+
                 <label for="background_image">Background image:</label>
                 <input type="text" id="background_image" name="background_image" onchange="reloadCard()" value="https://jcionx.github.io/3d-card/default.jpg">
+
                 <label for="click_url">URL:</label>
                 <input type="text" id="click_url" name="click_url" onchange="reloadCard()" value="">
+
                 <label for="new_tab">Open URL in new tab:</label>
                 <select id="new_tab" name="new_tab" onchange="reloadCard()">
                     <option value="true" selected>True</option>
                     <option value="false">False</option>
                 </select>
+
                 <label for="width">Card width:</label>
                 <input type="text" id="width" name="width" onchange="reloadCard()" value="300px">
+
                 <label for="height">Card height:</label>
                 <input type="text" id="height" name="height" onchange="reloadCard()" value="400px">
+
+                <label for="border_radius">Card border radius:</label>
+                <input type="text" id="border_radius" name="border_radius" onchange="reloadCard()" value="10px">
+
                 <label for="font_size">Font size:</label>
                 <input type="text" id="font_size" name="font_size" onchange="reloadCard()" value="18px">
                 
                 <label for="rotation_amount">Rotation amount:</label>
                 <input type="text" id="rotation_amount" name="rotation_amount" onchange="reloadCard()" value="2">
+
                 <label for="text_color">Text color:</label>
                 <input type="color" id="text_color" name="text_color" onchange="reloadCard()" value="#ffffff">
+
                 <label for="direction">Direction:</label>
                 <select id="direction" name="direction" onchange="reloadCard()">
                     <option value="nw">NW</option>
@@ -61,6 +75,7 @@
                     <option value="sw">SW</option>
                     <option value="se">SE</option>
                 </select>
+
                 <label for="glow">Glow:</label>
                 <select id="glow" name="glow" onchange="reloadCard()">
                     <option value="true" selected>True</option>
@@ -77,7 +92,7 @@
             var url = base_url;
 
             function reloadCard() {
-                url = `${base_url}?title=${document.getElementById('title').value}&text=${document.getElementById('text').value}&horizontal_margin=${document.getElementById('horizontal_margin').value}&vertical_margin=${document.getElementById('vertical_margin').value}&background_image=${document.getElementById('background_image').value}&click_url=${document.getElementById('click_url').value}&new_tab=${document.getElementById('new_tab').value}&width=${document.getElementById('width').value}&height=${document.getElementById('height').value}&font_size=${document.getElementById('font_size').value}&rotation_amount=${document.getElementById('rotation_amount').value}&text_color=${document.getElementById('text_color').value.split('#')[1]}&direction=${document.getElementById('direction').value}&glow=${document.getElementById('glow').value}`
+                url = `${base_url}?title=${document.getElementById('title').value}&text=${document.getElementById('text').value}&horizontal_margin=${document.getElementById('horizontal_margin').value}&vertical_margin=${document.getElementById('vertical_margin').value}&background_image=${document.getElementById('background_image').value}&click_url=${document.getElementById('click_url').value}&new_tab=${document.getElementById('new_tab').value}&width=${document.getElementById('width').value}&height=${document.getElementById('height').value}&font_size=${document.getElementById('font_size').value}&rotation_amount=${document.getElementById('rotation_amount').value}&text_color=${document.getElementById('text_color').value.split('#')[1]}&direction=${document.getElementById('direction').value}&glow=${document.getElementById('glow').value}&border-radius=${document.getElementById('border_radius').value}`
                 console.log(url)
                 document.querySelector('iframe').src = url
             }

@@ -76,6 +76,7 @@
         const new_tab = urlParams.get('new_tab') || 'true';
         const text_color = urlParams.get('text_color') || 'ffffff';
         const glow_visible = urlParams.get('glow') || 'true';
+        const border_radius = urlParams.get('border_radius') || '10';
         rotation_amount = urlParams.get('rotation_amount') || 2;
 
         const card_el = document.querySelector('.card');
@@ -86,6 +87,8 @@
 
         card_el.style.width = width;
         card_el.style.height = height;
+        card_el.style.borderRadius = border_radius + "px";
+
         title_el.innerHTML = title;
         body_el.innerHTML = text;
 
